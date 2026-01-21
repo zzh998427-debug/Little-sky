@@ -4,7 +4,7 @@
 免费容器（128MB+ 内存）使用 Cloudflare Tunnel + Token 模式，实现固定域名 VLESS + Reality 节点。
 
 ## 特点
-- 使用真实 Token + Public Hostname（固定域名 gerat.gerat.cc.cd）
+- 使用真实 Token + Public Hostname（固定域名 xxx.xxx.xxx）
 - VLESS + Reality（xtls-rprx-vision + chrome fp + sniff 防嗅探）
 - 自动生成节点链接并存档到 links/ 文件夹（带时间戳）
 - 自动下载最新 sing-box 和 cloudflared
@@ -31,7 +31,7 @@
 9. 用链接在客户端连接测试
 
 ## 节点链接示例（自动生成）
-vless://be970f7d-5f86-4aee-bffc-0c60eec9e58f@gerat.gerat.cc.cd:443?type=tcp&security=reality&fp=chrome&sni=www.google.com&flow=xtls-rprx-vision#Katabump-Node
+vless://be970f7d-5f86-4aee-bffc-0c60eec9e58f@your ip:443?type=tcp&security=reality&fp=chrome&sni=www.google.com&flow=xtls-rprx-vision#Katabump-Node
 
 ## 注意
 - Token 必须替换（dashboard 生成）
