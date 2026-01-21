@@ -27,7 +27,7 @@
 5. 等 1–2 分钟
 6. 查看 /home/container/sing-log.txt 确认 sing-box 启动（有 "listening on 127.0.0.1:8080"）
 7. 查看 /home/container/links/ 文件夹，里面有 node-时间戳.txt（节点链接）
-8. 浏览器打开 https://gerat.gerat.cc.cd 应空白或连接拒绝（正常）
+8. 浏览器打开 https://xxx.xxx.xxx 应空白或连接拒绝（正常）
 9. 用链接在客户端连接测试
 
 ## 节点链接示例（自动生成）
