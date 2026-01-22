@@ -16,7 +16,7 @@ export LOG_LEVEL="warn"
 export NODE_OPTIONS="--expose-gc --max-old-space-size=300"
 
 # 节点配置
-export CF_TOKEN="your-token-here"  # ← 替换你的真实 Token
+export CF_TOKEN="eyJhIjoiNmI5MGYyNWIzOGFlYTM3MzExODE3OTRjOTliYzgxOGYiLCJ0IjoiNTc4NzE2Y2UtMThjZS00ZDhjLTliMmItMDhhMTllMGYyZGVmIiwicyI6Ik5tTXdZakZpT1dVdE1EUTJPQzAwWldaaUxXRTFabUV0WVRjeE9ESmxOR1EyT1dOaiJ9"  # ← 替换你的真实 Token
 export LOCAL_PORT=8080
 export CONFIG_FILE="${APP_DIR}/config.json"
 
