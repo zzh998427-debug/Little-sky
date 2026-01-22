@@ -1,12 +1,30 @@
 {
-  "name": "katabump-singbox-tunnel",
+  "name": "little-sky-reality-tunnel",
   "version": "1.0.0",
+  "description": "低资源 VLESS Reality Tunnel - 基于 Little Sky 框架",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "NODE_ENV=production LOG_LEVEL=warn node --expose-gc --max-old-space-size=300 index.js",
+    "start:debug": "LOG_LEVEL=debug node --expose-gc index.js",
+    "start:development": "LOG_LEVEL=info node --expose-gc index.js",
+    "test": "node test.js",
+    "lint": "eslint index.js",
+    "monitor": "node --expose-gc --inspect index.js"
   },
+  "keywords": [
+    "little-sky",
+    "vless",
+    "reality",
+    "tunnel",
+    "low-memory"
+  ],
+  "author": "zzh998427-debug",
+  "license": "MIT",
   "engines": {
     "node": ">=18.0.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^8.0.0"
+  }
 }
