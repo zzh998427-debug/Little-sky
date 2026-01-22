@@ -1,23 +1,20 @@
 #!/bin/bash
 
-echo "开始一键部署..."
+echo "Starting one-click deployment..."
 
-# 替换 Token 和域名（手动改这里）
-CF_TOKEN="your-token-here"  # ← 替换成你的 Token
-DOMAIN="gerat.gerat.cc.cd"  # ← 替换成你的域名
+CF_TOKEN="eyJhIjoiNmI5MGYyNWIzOGFlYTM3MzExODE3OTRjOTliYzgxOGYiLCJ0IjoiNTc4NzE2Y2UtMThjZS00ZDhjLTliMmItMDhhMTllMGYyZGVmIiwicyI6Ik5tTXdZakZpT1dVdE1EUTJPQzAwWldaaUxXRTFabUV0WVRjeE9ESmxOR1EyT1dOaiJ9"               # Replace with your Token
+FIXED_DOMAIN="gerat.gerat.cc.cd"         # Replace with your domain
 
-# 更新 init-service.sh 的 Token
 sed -i "s/your-token-here/$CF_TOKEN/g" init-service.sh
+sed -i "s/'gerat.gerat.cc.cd'/'$FIXED_DOMAIN'/g" index.js
 
-# 更新 index.js 的域名
-sed -i "s/'gerat.gerat.cc.cd'/'$DOMAIN'/g" index.js
-
-# 赋予权限
 chmod +x init-service.sh
 
-# 启动
-node index.js &
+npm install --production
 
-echo "部署完成！"
-echo "查看链接: ls /home/container/links/"
-echo "查看隧道日志: tail -f /tmp/.logs/t.log"
+echo "Starting node index.js..."
+nohup node index.js > output.log 2>&1 &
+
+echo "Deployment complete!"
+echo "Check links: ls /home/container/links/"
+echo "Check tunnel log: tail -f /tmp/.logs/t.log"
