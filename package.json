@@ -1,7 +1,7 @@
 {
   "name": "little-sky-reality-tunnel",
   "version": "1.0.0",
-  "description": "低资源 VLESS Reality Tunnel - 基于 Little Sky 框架",
+  "description": "Low-resource VLESS Reality Tunnel based on Little Sky framework",
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=production LOG_LEVEL=warn node --expose-gc --max-old-space-size=300 index.js",
