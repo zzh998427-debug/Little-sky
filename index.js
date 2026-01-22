@@ -17,10 +17,11 @@ exec(`bash ${scriptPath} 2>&1`, (error, stdout, stderr) => {
   if (stdout) content += `STDOUT:\n${stdout}\n`;
   if (stderr) content += `STDERR:\n${stderr}\n`;
 
-  const fixedDomain = 'gerat.gerat.cc.cd'; // Replace with your domain
+  const fixedDomain = 'gerat.gerat.cc.cd';
   const nodeLink = `vless://be970f7d-5f86-4aee-bffc-0c60eec9e58f@${fixedDomain}:443?type=tcp&security=reality&fp=chrome&sni=www.google.com&flow=xtls-rprx-vision#Katabump-${timestamp}`;
 
   content += `Generated Node Link: ${nodeLink}\n`;
+  console.log('YOUR NODE LINK: ' + nodeLink);
 
   const linkFile = path.join(linkDir, `node-${timestamp}.txt`);
   fs.writeFileSync(linkFile, nodeLink + '\n');
